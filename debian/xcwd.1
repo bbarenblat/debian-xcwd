@@ -1,0 +1,71 @@
+.\" © 2013, 2015-2018 Benjamin Barenblat
+.\"
+.\" Licensed under the Apache License, Version 2.0 (the "License"); you may not
+.\" use this file except in compliance with the License.  You may obtain a copy
+.\" of the License at
+.\"
+.\"     http://www.apache.org/licenses/LICENSE-2.0
+.\"
+.\" Unless required by applicable law or agreed to in writing, software
+.\" distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+.\" WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
+.\" License for the specific language governing permissions and limitations
+.\" under the License.
+.TH XCWD 1 2018-03-06
+.SH NAME
+xcwd \- X current working directory
+.SH SYNOPSIS
+.B xcwd
+.SH DESCRIPTION
+.B xcwd
+is a simple tool which prints the current working directory of the focused
+window.
+It's useful for launching applications directly into the same directory as the
+focused application\(emfor instance, you might want to launch a new terminal in
+the same directory as your editor.
+You can make this happen by binding something like
+.sp
+.RS
+.EX
+urxvt \-cd "$(xcwd)"
+.EE
+.RE
+.sp
+to a keyboard shortcut within your window manager and then invoking that
+shortcut during editor usage.
+.SH EXIT STATUS
+.B xcwd
+exits with a nonzero status if it can't figure out the working directory
+associated with the currently focused window and $HOME is unset.
+Otherwise,
+.B xcwd
+returns zero.
+.SH ENVIRONMENT
+If
+.B xcwd
+can't figure out the working directory associated with the currently focused
+window, it falls back on $HOME.
+.SH BUGS
+.BR xcwd 's
+algorithm fails when applied to most single-instance applications, applications
+with tabs, or terminal multiplexers.
+.BR lilyterm (1),
+.BR screen (1),
+.BR tmux (1),
+and
+.BR urxvtc (1)
+are all known to fail.
+.SH SEE ALSO
+.BR gnome-terminal (1),
+.BR terminology (1),
+.BR urxvt (1),
+.BR xterm (1)
+.SH COPYRIGHT
+.B xcwd
+is copyright 2013
+.MT adrien+dev@schischi.me
+Adrien Schildknecht
+.ME .
+.PP
+This manual page is copyright 2013, 2015\(en2018 Benjamin Barenblat and
+licensed under the Apache License, Version 2.0.

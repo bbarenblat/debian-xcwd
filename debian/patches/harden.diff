@@ -1,0 +1,15 @@
+From: Benjamin Barenblat <bbaren@debian.org>
+Subject: Harden build
+Forwarded: not-needed
+--- a/Makefile
++++ b/Makefile
+@@ -7,6 +7,9 @@
+ UNAME:=$(shell uname)
+ O=${CFILES:.c=.o}
+ 
++CFLAGS += $(shell dpkg-buildflags --get CPPFLAGS) $(shell dpkg-buildflags --get CFLAGS)
++LDFLAGS += $(shell dpkg-buildflags --get LDFLAGS)
++
+ ifeq ($(UNAME), Linux)
+     CFLAGS += -DLINUX
+ else

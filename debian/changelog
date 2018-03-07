@@ -1,0 +1,7 @@
+xcwd (0~1.gbp3f0728b-1) unstable; urgency=medium
+
+  ** SNAPSHOT build @3f0728b932904985b703b33bd5c936ea96cf15a0 **
+
+  * Initial release. (Closes: #880570)
+
+ -- Benjamin Barenblat <bbaren@debian.org>  Tue, 06 Mar 2018 18:00:34 -0500

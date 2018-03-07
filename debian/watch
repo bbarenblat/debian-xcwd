@@ -1,0 +1,4 @@
+# Upstream does not cut releases at this point – only Git snapshots.
+# Consequently, constructing a suitable watch file is impossible.
+#
+#  -- Benjamin Barenblat <bbaren@debian.org>  Tue, 06 Mar 2018 18:00:34 -0500
