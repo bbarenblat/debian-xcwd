@@ -1,3 +1,11 @@
+xcwd (0~2.gbpe2c777c-1) unstable; urgency=medium
+
+  ** SNAPSHOT build @e2c777cbf3a226522a4871f97916f0cb0bee3688 **
+
+  * New snapshot in preparation for buster release.
+
+ -- Benjamin Barenblat <bbaren@debian.org>  Fri, 23 Nov 2018 11:31:37 -0500
+
 xcwd (0~1.gbp3f0728b-1) unstable; urgency=medium
 
   ** SNAPSHOT build @3f0728b932904985b703b33bd5c936ea96cf15a0 **

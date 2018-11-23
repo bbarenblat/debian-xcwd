@@ -3,9 +3,9 @@ Subject: Harden build
 Forwarded: not-needed
 --- a/Makefile
 +++ b/Makefile
-@@ -7,6 +7,9 @@
- UNAME:=$(shell uname)
- O=${CFILES:.c=.o}
+@@ -10,6 +10,9 @@
+ .PHONY: all clean distclean install
+ .SUFFIXES: .c .o
  
 +CFLAGS += $(shell dpkg-buildflags --get CPPFLAGS) $(shell dpkg-buildflags --get CFLAGS)
 +LDFLAGS += $(shell dpkg-buildflags --get LDFLAGS)
